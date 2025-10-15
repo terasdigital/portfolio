@@ -7,13 +7,15 @@ import SidebarMenu from "@/components/sidebar";
 export default function Navbar() {
   return (
     <div className="flex items-center justify-around text-center fixed top-0 left-0 right-0 shadow-lg shadow-[#DE758E]/10 bg-[#f5f5f5]/55">
-      <Image
-        src="/logo-porto.png"
-        alt="logo"
-        width={150}
-        height={150}
-        className="max-sm:w-30 max-sm:h-auto"
-      />
+      <a href="#">
+        <Image
+          src="/logo-porto.png"
+          alt="logo"
+          width={150}
+          height={150}
+          className="max-sm:w-30 max-sm:h-auto"
+        />
+      </a>
       {/* <Image
         src="/logo-dark.png"
         alt="logo"
