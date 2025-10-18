@@ -1,15 +1,40 @@
+"use client";
+
 import Image from "next/image";
+import { use, useEffect, useState } from "react";
+import { supabase } from "@/lib/supabaseClient";
+import ProjectCard from "@/components/projectcard";
+import Link from "next/link";
+
 import {
   Linkedin,
   GitHub,
   Figma,
   Globe,
   Settings,
-  Link,
+  Link as LinkIcon,
   Copy,
 } from "react-feather";
 
+interface Project {
+  id: number;
+  title: string;
+  category: string;
+  image_url: string;
+}
+
 export default function Home() {
+  const [projects, setProjects] = useState<Project[]>([]);
+
+  useEffect(() => {
+    async function fetchProjects() {
+      const { data, error } = await supabase.from("projects").select("*");
+      if (error) console.error(error);
+      else setProjects(data || []);
+    }
+    fetchProjects();
+  }, []);
+
   return (
     <div className="font-sans grid grid-rows-2 min-h-screen p-25 md:p-35 gap-16 max-sm:p-20">
       <main>
@@ -79,7 +104,7 @@ export default function Home() {
               </p>
             </div>
             <div className="bg-[#D1EEF2] p-4 text-center rounded-3xl text-[#C93F53]">
-              <Link className="inline mb-2" />
+              <LinkIcon className="inline mb-2" />
               <h1 className="font-semibold my-2">Frontend Integration</h1>
               <p>
                 I connect APIs and backend systems to create dynamic,
@@ -108,6 +133,19 @@ export default function Home() {
           <h1 className="font-bold text-center text-2xl sm:text-4xl pt-20 sm:pt-25 pb-5">
             My Projects
           </h1>
+          <p>Here are some of my projects that showcase my skills in UI/UX</p>
+          <div>
+            {projects.length > 0 ? (
+              projects.map((project) => (
+                <ProjectCard key={project.id} {...project} />
+              ))
+            ) : (
+              <p>Loading projects...</p>
+            )}
+            <p>
+              <Link href="/projects"> See more</Link>
+            </p>
+          </div>
         </div>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
