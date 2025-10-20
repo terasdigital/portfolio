@@ -16,6 +16,7 @@ import {
   Settings,
   Link as LinkIcon,
   Copy,
+  Mail,
 } from "react-feather";
 
 interface Project {
@@ -55,8 +56,10 @@ export default function Home() {
             </p>
             <p className="mt-4">
               <a
-                href=""
+                href="https://wa.me/6282298935964"
                 className="bg-[#C93F53] text-[#f5f5f5] px-4 py-2 rounded-md hover:bg-[#7B1E22] font-bold"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Hire Me
               </a>
@@ -69,11 +72,29 @@ export default function Home() {
               width={300}
               height={300}
             />
-            <a href="" className="hover:text-[#C93F53]">
+            <a
+              href="https://linkedin.com/in/adhitya-ramadhan-putra-b60a66b2"
+              className="hover:text-[#C93F53]"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Linkedin className="inline m-2" />
             </a>
-            <a href="" className="hover:text-[#C93F53]">
+            <a
+              href="https://github.com/terasdigital"
+              className="hover:text-[#C93F53]"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <GitHub className="inline m-2" />
+            </a>
+            <a
+              href="mailto:adhityarp.app@gmail.com"
+              className="hover:text-[#C93F53]"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Mail className="inline m-2" />
             </a>
           </div>
         </div>
@@ -178,11 +199,29 @@ export default function Home() {
           <span className="font-semibold">Adhitya Ramadhan Putra</span>
         </p>
         <div>
-          <a href="" className="hover:text-[#C93F53]">
+          <a
+            href="https://linkedin.com/in/adhitya-ramadhan-putra-b60a66b2"
+            className="hover:text-[#C93F53]"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Linkedin className="inline m-2 max-sm:w-5 max-sm:h-auto" />
           </a>
-          <a href="" className="hover:text-[#C93F53]">
+          <a
+            href="https://github.com/terasdigital"
+            className="hover:text-[#C93F53]"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <GitHub className="inline m-2 max-sm:w-5 max-sm:h-auto" />
+          </a>
+          <a
+            href="mailto:adhityarp.app@gmail.com"
+            className="hover:text-[#C93F53]"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Mail className="inline m-2" />
           </a>
         </div>
       </footer>

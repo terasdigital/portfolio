@@ -42,7 +42,7 @@ export default function ContactSection() {
           </p>
           <form
             onSubmit={handleSubmit}
-            className="mt-10 gap-3 flex max-md:flex-col justify-center"
+            className="mt-10 gap-3 flex max-md:flex-col justify-center pb-5"
           >
             <input
               type="email"
