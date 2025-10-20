@@ -5,6 +5,8 @@ import { use, useEffect, useState } from "react";
 import { supabase } from "@/lib/supabaseClient";
 import ProjectCard from "@/components/projectcard";
 import Link from "next/link";
+import Testimonials from "@/components/Testimonials";
+import ContactSection from "@/components/ContactSection";
 
 import {
   Linkedin,
@@ -36,8 +38,8 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="font-sans grid grid-rows-2 min-h-screen p-25 md:p-35 gap-16 max-sm:p-20">
-      <main>
+    <div className="font-sans grid grid-rows-[1fr_auto] min-h-screen ">
+      <main className="p-25 md:p-35 gap-16 max-sm:p-20">
         <div className="max-md:text-center max-md:mx-auto flex justify-around items-center w-full flex-wrap-reverse">
           <div>
             <h1 className="sm:text-lg">Hi, I am </h1>
@@ -133,7 +135,9 @@ export default function Home() {
           <h1 className="font-bold text-center text-2xl sm:text-4xl pt-20 sm:pt-25 pb-5">
             My Projects
           </h1>
-          <p>Here are some of my projects that showcase my skills in UI/UX</p>
+          <p className="text-center">
+            Here are some of my projects that showcase my skills in UI/UX
+          </p>
           <div>
             {projects.length > 0 ? (
               projects.map((project) => (
@@ -142,58 +146,45 @@ export default function Home() {
             ) : (
               <p>Loading projects...</p>
             )}
-            <p>
-              <Link href="/projects"> See more</Link>
+            <p className="text-center">
+              <Link
+                href="/projects"
+                className="hover:text-[#C93F53] font-semibold"
+              >
+                {" "}
+                See more
+              </Link>
             </p>
           </div>
         </div>
+        <div id="testimonials">
+          <Testimonials />
+        </div>
+        <div id="contact">
+          <ContactSection />
+        </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      <footer className="flex justify-center gap-15 items-center bg-gray-100 pb-5 text-[12px] ">
+        <Image
+          aria-hidden
+          src="/logo-porto.png"
+          alt=""
+          width={150}
+          height={150}
+          className="max-sm:w-20 max-sm:h-auto"
+        />
+        <p>
+          &copy; {new Date().getFullYear()}{" "}
+          <span className="font-semibold">Adhitya Ramadhan Putra</span>
+        </p>
+        <div>
+          <a href="" className="hover:text-[#C93F53]">
+            <Linkedin className="inline m-2 max-sm:w-5 max-sm:h-auto" />
+          </a>
+          <a href="" className="hover:text-[#C93F53]">
+            <GitHub className="inline m-2 max-sm:w-5 max-sm:h-auto" />
+          </a>
+        </div>
       </footer>
     </div>
   );

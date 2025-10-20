@@ -38,8 +38,10 @@ export default function ProjectsPage() {
       : projects.filter((p) => p.category === activeCategory);
 
   return (
-    <main>
-      <h2>My Projects</h2>
+    <main className="p-25 sm:p-35">
+      <h2 className="text-2xl sm:text-4xl text-center font-semibold pb-5">
+        My Projects
+      </h2>
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
         quia doloribus quam tenetur, sequi reprehenderit laboriosam quae
@@ -50,14 +52,14 @@ export default function ProjectsPage() {
       </p>
 
       {/* Filter Buttons */}
-      <div>
+      <div className="pt-10 justify-center flex gap-6">
         {categories.map((cat) => (
           <button
             key={cat}
             onClick={() => setActiveCategory(cat)}
             className={`px-5 py-2 rounded-full border transition font-medium ${
               activeCategory === cat
-                ? "bg-orange-500 text-white border-orange-500"
+                ? "bg-[#C93F53] text-white border-[#C93F53]"
                 : "border-gray-300 hover:bg-gray-100"
             }`}
           >
