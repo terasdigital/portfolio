@@ -30,7 +30,7 @@ export default function ContactSection() {
 
   return (
     <section>
-      <div className="text-center pt-20 sm:pt-25 sm:w-[70%] mx-auto flex grow">
+      <div className="text-center pt-20 sm:pt-25 sm:w-[70%] mx-auto flex grow justify-center">
         <div className="bg-[#E79FB9] rounded-lg p-10 ]">
           <h2 className="font-semibold text-2xl sm:text-4xl pb-5">
             Let's Build Something Great Together
