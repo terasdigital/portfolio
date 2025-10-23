@@ -33,12 +33,13 @@ export default function ContactSection() {
       <div className="text-center pt-20 sm:pt-25 sm:w-[70%] mx-auto flex grow">
         <div className="bg-[#E79FB9] rounded-lg p-10 ]">
           <h2 className="font-semibold text-2xl sm:text-4xl pb-5">
-            Let's Design Together
+            Let's Build Something Great Together
           </h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-            tempore culpa sequi harum earum veritatis suscipit pariatur
-            distinctio nesciunt eius?
+            Got project in mind or need a modern website for your business?{" "}
+            <br />
+            I'm open to collaboration and freelance work - let's make your idea
+            real.
           </p>
           <form
             onSubmit={handleSubmit}
@@ -57,7 +58,7 @@ export default function ContactSection() {
               disabled={loading}
               className="bg-[#C93F53] text-[#f5f5f5] px-4 py-2 rounded-md hover:bg-[#7B1E22] font-bold"
             >
-              {loading ? "Sending..." : "Contact Me"}
+              {loading ? "Sending..." : "Get in Touch"}
             </button>
           </form>
           {message && <p>{message}</p>}

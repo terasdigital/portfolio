@@ -39,7 +39,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="font-sans grid grid-rows-[1fr_auto] min-h-screen ">
+    <div className="font-sans grid grid-rows-[1fr_auto] min-h-screen w-screen ">
       <main className="p-25 md:p-35 gap-16 max-sm:p-20">
         <div className="max-md:text-center max-md:mx-auto flex justify-around items-center w-full flex-wrap-reverse">
           <div>
@@ -185,7 +185,7 @@ export default function Home() {
           <ContactSection />
         </div>
       </main>
-      <footer className="flex justify-center gap-15 items-center bg-gray-100 pb-5 text-[12px] ">
+      <footer className="flex flex-wrap justify-center sm:justify-between gap-3 sm:gap-15 items-center bg-gray-100 px-5 text-[12px] pb-3 ">
         <Image
           aria-hidden
           src="/logo-porto.png"
@@ -194,7 +194,7 @@ export default function Home() {
           height={150}
           className="max-sm:w-20 max-sm:h-auto"
         />
-        <p>
+        <p className="max-sm:order-3">
           &copy; {new Date().getFullYear()}{" "}
           <span className="font-semibold">Adhitya Ramadhan Putra</span>
         </p>
