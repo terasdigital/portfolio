@@ -39,7 +39,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="font-sans grid grid-rows-[1fr_auto] min-h-screen w-screen ">
+    <div className="font-sans grid grid-rows-[1fr_auto] min-h-screen w-full overflow-x-hidden">
       <main className="p-25 md:p-35 gap-16 max-sm:p-20">
         <div className="max-md:text-center max-md:mx-auto flex justify-around items-center w-full flex-wrap-reverse">
           <div>
@@ -71,6 +71,7 @@ export default function Home() {
               alt="Profile Picture"
               width={300}
               height={300}
+              className="w-full max-w-[300px] h-auto mx-auto"
             />
             <a
               href="https://linkedin.com/in/adhitya-ramadhan-putra-b60a66b2"
