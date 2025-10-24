@@ -40,7 +40,7 @@ export default function Home() {
 
   return (
     <div className="font-sans grid grid-rows-[1fr_auto] min-h-screen w-full overflow-x-hidden">
-      <main className="p-25 md:p-35 gap-16 max-sm:p-20">
+      <main className="px-8 md:px-16 pb-14 pt-24 gap-16 max-w-screen-lg mx-auto sm:px-10">
         <div className="max-md:text-center max-md:mx-auto flex justify-around items-center w-full flex-wrap-reverse">
           <div>
             <h1 className="sm:text-lg">Hi, I am </h1>
