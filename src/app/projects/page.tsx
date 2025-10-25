@@ -38,7 +38,7 @@ export default function ProjectsPage() {
       : projects.filter((p) => p.category === activeCategory);
 
   return (
-    <main className="p-25 sm:p-35">
+    <main className="pt-20 sm:pt-24 px-8 sm:px-18 mx-auto flex flex-col justify-center">
       <h2 className="text-2xl sm:text-4xl text-center font-semibold pb-5">
         My Projects
       </h2>
@@ -52,12 +52,12 @@ export default function ProjectsPage() {
       </p>
 
       {/* Filter Buttons */}
-      <div className="pt-10 justify-center flex gap-6">
+      <div className="pt-10 justify-center flex flex-wrap gap-4 sm:gap-6">
         {categories.map((cat) => (
           <button
             key={cat}
             onClick={() => setActiveCategory(cat)}
-            className={`px-5 py-2 rounded-full border transition font-medium ${
+            className={`px-5 py-2 rounded-full border transition max-sm:text-sm font-medium ${
               activeCategory === cat
                 ? "bg-[#C93F53] text-white border-[#C93F53]"
                 : "border-gray-300 hover:bg-gray-100"
