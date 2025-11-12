@@ -67,7 +67,7 @@ export default function Home() {
           </div>
           <div className="text-center hidden md:block">
             <Image
-              src="/photo-porto-4.png"
+              src="/foto-porto4.png"
               alt="Profile Picture"
               width={300}
               height={300}
